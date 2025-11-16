@@ -149,3 +149,6 @@ The app uses **continuous wake word detection** and **automatic pause detection*
 - Ensure Speech to Text works seamlessly.
 - Partner with a hardware (preferably spectacles) company to reduce dependence on phones.
 - Reach out to institutions like the Canadian National Institute for the Blind (CNIB) to get feedback from future users.
+
+## License
+>This project is licensed under the MIT License. See [LICENSE](LICENSE) for more details.
