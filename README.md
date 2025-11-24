@@ -6,7 +6,7 @@ In 1957, we launched Sputnik, humanity's first satellite. In the decades that fo
 
 However, we've overlooked one important thing: safe navigation for the visually impaired. Even today, tens of millions of people find it challenging to reach the curb from their doors on their own.
 
-This weekend at BramHacks, my team and I decided to bridge the gap that we call ‘The Final Frontier’.
+So at BramHacks, my team and I decided to bridge the gap that we call ‘The Final Frontier’.
 
 ## Overview
 
